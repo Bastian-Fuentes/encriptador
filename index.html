@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabeza">
+        <h1>Encriptador de Texto</h1>
+    </header>
+    <main class="pres">
+        <div class="presIntro">
+            <textarea id="inputText" placeholder="Ingresa tu texto aquí..."></textarea><br>
+            <button onclick="encriptar()">Encriptar</button>
+            <button onclick="desencriptar()">Desencriptar</button>
+        </div>
+        <div class="presRes">
+            <textarea id="outputText" readonly placeholder="Resultado..."></textarea><br>
+            <button onclick="copyText()">Copiar</button>
+        </div>
+    </main>
+    <footer class="pie">
+        Desarrollado por Bastian Fuentes para Curso ONE LATAM
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
