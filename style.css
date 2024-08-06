@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cinzel', serif;
+    cursor: url('images/mouse1.png'), auto;
 }
 
 body {
@@ -72,8 +73,9 @@ button {
     color: #fff;
     font-size: 1em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
     transition: background-color 0.3s ease;
+    cursor: url('images/mouse1.png'), auto;
 }
 
 button:hover {

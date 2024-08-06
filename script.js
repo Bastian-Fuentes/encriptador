@@ -45,5 +45,11 @@ function checkRedirection(text) {
 
 const redirectionArray = [
     ["rick", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"],
-    ["nightcore", "https://www.youtube.com/watch?v=cvaIgq5j2Q8"]
+    ["nightcore", "https://www.youtube.com/watch?v=cvaIgq5j2Q8"],
+    ["lol", "https://www.youtube.com/watch?v=ZHhqwBwmRkI"]
 ];
+
+document.getElementById('inputText').addEventListener('input', function (event) {
+    // Filtrar el valor del textarea
+    this.value = this.value.replace(/[^a-z\s]/g, '');
+});
