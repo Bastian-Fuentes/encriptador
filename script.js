@@ -7,13 +7,18 @@ function encriptar() {
         .replace(/a/g, "ai")
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
-    document.getElementById("outputText").value = encryptedText;
 
     const redirectLink = checkRedirection(text);
     if (redirectLink) {
         window.location.href = redirectLink;
         return;
     }
+
+    if (/[A-Z]/.test(text)) {
+        alert("El texto contiene caracteres no validos. Por favor, ingrese solo letras minusculas y espacios.");
+        return;
+    }
+    document.getElementById("outputText").value = encryptedText;
 }
 
 function desencriptar() {
@@ -50,6 +55,5 @@ const redirectionArray = [
 ];
 
 document.getElementById('inputText').addEventListener('input', function (event) {
-    // Filtrar el valor del textarea
-    this.value = this.value.replace(/[^a-z\s]/g, '');
+    this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
 });
